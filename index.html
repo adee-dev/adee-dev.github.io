@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <!-- head definitions go here -->
-    </head>
-    <body>
-        <!-- the content goes here -->
-        <h3>Hello world!</h3>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API demonstration</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    #map{
+        height: 500px;
+        width: 100%;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script>
+
+        function initMap() {
+            var location = {lat: 18.520430, lng: 73.856743};
+            var map = new google.maps.Map(document.getElementById("map"), {
+
+                zoom: 4, 
+                center: location
+            });
+        }
+
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4AJwZuYkdr2WmUj0lPWhPumX7CA8GubQ&callback=initMap"> map</script>
+</body>
 </html>
 
